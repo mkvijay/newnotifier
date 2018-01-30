@@ -5,11 +5,21 @@ pipeline {
     agent any
 
     stages {
-        stage ('first stage') {
-            echo 'Hello world'
+        stage ('Compile Stage') {
+            steps {
+                echo 'Hello first'
             }
-        stage ('second stage') {
-            echo 'welcome library'
+        }
+        stage ('Testing Stage') {
+            
+            steps {
+                echo 'Hello Second'
             }
+        }
+        stage ('Deployment Stage') {
+            steps {
+                echo 'Hello Third'
+            }
+        }
     }
 }
