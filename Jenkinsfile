@@ -21,5 +21,10 @@ pipeline {
                 echo 'Hello Third'
             }
         }
+        post {
+            always {
+                notifier currentBuild.result
+            }
+        }
     }
 }
