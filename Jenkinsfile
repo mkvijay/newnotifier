@@ -20,10 +20,10 @@ pipeline {
             steps {
                 echo 'Hello Third'
             }
-        }
-        post {
-            always {
-                notifier currentBuild.result
+            post {
+                always {
+                    notifier currentBuild.result
+                }
             }
         }
     }
